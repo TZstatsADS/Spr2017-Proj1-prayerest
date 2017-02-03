@@ -299,6 +299,7 @@ Plot.setting(ggplot(sentences, aes(pct.complete, readability)) +
 ##2.4 Memorability
 
 Google search results can serve as a useful indicator of public opinion. I use a function from [theBioBucket’s blog post](http://thebiobucket.blogspot.com/2012/03/playing-with-xml-get-no-of-google.html) to count Google hits for a query. 
+Alert: Google will block you after about the 300th recursion!
 ```{r,warning=FALSE, message=FALSE}
 #scraping Google search hits
 
@@ -319,7 +320,7 @@ GoogleHits <- function(query){
 
 A quick plot reveals that there’s a huge difference between the most-quoted sentences and the rest of the speech, particularly the top ten. Do these top sentences align with your expectations?
 ```{r,warning=FALSE, message=FALSE}
-##sometimes this chunk may take long time to run or report an error, as the function GoogleHits is not stable due to external factors. If this happens then, please just re-open the Rstudio and try again later.
+##sometimes this chunk may take long time to run or report an error, as the function GoogleHits is not stable due to external factors. If this happens then, please just re-open the Rstudio and try again later. 
 #pass each sentence to the function, stripped of punctuation and grouped in brackets, and with “mlk” added to ensure it related to the speech
 sentences <- sentences[, google.hits := GoogleHits(paste0("[", gsub("[,;!.]", "", speech), 
                                              "] mlk"))]
