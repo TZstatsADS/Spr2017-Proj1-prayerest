@@ -322,7 +322,7 @@ A quick plot reveals that there’s a huge difference between the most-quoted se
 ```{r,warning=FALSE, message=FALSE}
 ##sometimes this chunk may take long time to run or report an error, as the function GoogleHits is not stable due to external factors. If this happens then, please just re-open the Rstudio and try again later. 
 #pass each sentence to the function, stripped of punctuation and grouped in brackets, and with “mlk” added to ensure it related to the speech
-sentences <- sentences[, google.hits := GoogleHits(paste0("[", gsub("[,;!.]", "", speech), 
+sentences[, google.hits := GoogleHits(paste0("[", gsub("[,;!.]", "", speech), 
                                              "] mlk"))]
 ggplot(sentences, aes(pct.complete, google.hits / 1e6)) +
   geom_line(color="red3") + # Lighten dots
