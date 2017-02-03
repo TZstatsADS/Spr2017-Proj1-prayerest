@@ -11,7 +11,8 @@ Term: Spring 2017
 + Projec title: Visualization of Inaugural Speeches
 + This project is conducted by [Xiaowo Sun]
 
-+ Project summary: [a short summary] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
++ Project summary: This project gets some findings in presidents' inaugural addresses (hope you find they are interesting), from the perspectives of two major political parties(Part 1) and single speeches(Part 2). In part 1, it shows the words frequency of each parties by wordcloud and ggplot. In part 2, it visualizes the sentiment, readability and memorability of each speeches, and takes the incumbent president as an example for analysis.
+
 
 Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
 

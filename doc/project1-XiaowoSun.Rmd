@@ -72,11 +72,11 @@ Throughout most of its history, politics of the United States have been dominate
 ##1.1 Load Speeches 
 ```{r}
 ##Republican corpus
-Rpbl.txt <- file.path("./data/InauguralSpeeches/Republican")
+Rpbl.txt <- file.path("../data/InauguralSpeeches/Republican")
 Rpbl <- Corpus(DirSource(Rpbl.txt))
 Rpbl
 ##Democratic corpus
-Dmcr.txt <- file.path("./data/InauguralSpeeches/Democratic")
+Dmcr.txt <- file.path("../data/InauguralSpeeches/Democratic")
 Dmcr <- Corpus(DirSource(Dmcr.txt))
 Dmcr
 ```
@@ -228,7 +228,7 @@ This part, I mainly provide the visualization of the sentiment development, the 
 
 ##2.1 Load Speeches
 ```{r, warning=FALSE, message=FALSE}
-folder.pathA="./data/InauguralSpeeches/All"
+folder.pathA="../data/InauguralSpeeches/All"
 speeches.A=list.files(path = folder.pathA, pattern = "*.txt")
 ff.A<-Corpus(DirSource(folder.pathA))
 
@@ -315,8 +315,8 @@ GoogleHits <- function(query){
 ```
 
 ```{r,warning=FALSE, message=FALSE}
+##sometimes this chunk may take long time to run or report an error, if this happens then, please just re-open the Rstudio and try again later
 #pass each sentence to the function, stripped of punctuation and grouped in brackets, and with “mlk” added to ensure it related to the speech
-##sometimes this chunk may take long time to run or report an error, if this happens then, please just re-open the Rstudio and try again
 sentences <- sentences[, google.hits := GoogleHits(paste0("[", gsub("[,;!.]", "", speech), "] mlk"))]
 ```
 
